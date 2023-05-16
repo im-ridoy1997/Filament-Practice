@@ -26,7 +26,7 @@ class EmployeeResource extends Resource
 {
     protected static ?string $model = Employee::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-briefcase';
 
     public static function form(Form $form): Form
     {
@@ -51,7 +51,7 @@ class EmployeeResource extends Resource
     {
         return $table
             ->columns([
-                //TextInput::make('country_id')->required()->numeric(),
+                TextColumn::make('country_id')->sortable()->searchable(),
                 TextColumn::make('state_id')->sortable()->searchable(),
                 TextColumn::make('city_id')->sortable()->searchable(),
                 TextColumn::make('department_id')->sortable()->searchable(),

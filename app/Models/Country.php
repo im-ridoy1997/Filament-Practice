@@ -15,4 +15,12 @@ class Country extends Model
         'country_code',
         'name'
     ];
+
+    public function employee(){
+        return $this->hasMany('App\Models\Employee');
+    }
+
+    public function state(){
+        return $this->hasMany('App\Models\State');
+    }
 }
